@@ -36,7 +36,7 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="flex flex-col">
             <div className="flex items-center gap-2">
               <h1 className="font-extrabold text-lg sm:text-xl tracking-tight text-slate-900">
-                DRISHTI
+                NIVARAN
               </h1>
               <span className="text-[10px] bg-red-100 text-red-800 px-2 py-0.5 rounded-full font-bold font-mono">
                 DISASTER RESPONSE

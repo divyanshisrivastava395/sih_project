@@ -1,0 +1,117 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+/* Clean Light Pale-White Disaster Response Theme */
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --bg-canvas: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --border-muted: #E2E8F0;
+}
+
+body {
+  background-color: #F8FAFC;
+  color: #0F172A;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom Leaflet Map Container */
+.disaster-map-container {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  background: #F1F5F9;
+  position: relative;
+  z-index: 1;
+}
+
+/* Leaflet light styling */
+.leaflet-container {
+  background: #F1F5F9 !important;
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #FFFFFF !important;
+  color: #0F172A !important;
+  border: 1px solid #CBD5E1 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15) !important;
+  padding: 0 !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+
+.leaflet-popup-tip {
+  background: #FFFFFF !important;
+  border: 1px solid #CBD5E1 !important;
+}
+
+.leaflet-control-zoom a {
+  background: #FFFFFF !important;
+  color: #0F172A !important;
+  border-color: #E2E8F0 !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background: #F1F5F9 !important;
+}
+
+/* Pulsing markers for emergency zones and SOS */
+@keyframes emergency-pulse {
+  0% {
+    transform: scale(0.96);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.6);
+  }
+  70% {
+    transform: scale(1.04);
+    box-shadow: 0 0 0 12px rgba(220, 38, 38, 0);
+  }
+  100% {
+    transform: scale(0.96);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+  }
+}
+
+.animate-emergency-pulse {
+  animation: emergency-pulse 2s infinite ease-in-out;
+}
+
+@keyframes user-ping {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.animate-user-ping {
+  animation: user-ping 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Custom scrollbar for panel lists */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+

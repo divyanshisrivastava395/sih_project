@@ -1,0 +1,6 @@
+{
+  "name": "RAAHAT Citizen Disaster Response & Safe Relocation System",
+  "description": "Resident disaster hazard visualization, voice-to-filter safe relocation, resource coordination, and emergency response.",
+  "requestFramePermissions": ["microphone", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
